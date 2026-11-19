@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A0202">
+  <meta name="description" content="Worldcar: una selección exclusiva de vehículos para quienes disfrutan cada kilómetro.">
+  <title>Worldcar | Conduce lo extraordinario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="hero" id="inicio" aria-label="Vehículos destacados">
+      <div class="carousel" aria-roledescription="carrusel" aria-label="Galería de vehículos">
+        <div class="carousel__slides">
+          <div class="carousel__slide is-active" aria-hidden="false">
+            <img src="../assets/images/maxim-hopman-Q_l5NzA8o4Y-unsplash.jpg" alt="Vista frontal de un Audi deportivo al atardecer" fetchpriority="high">
+          </div>
+          <div class="carousel__slide" aria-hidden="true">
+            <img src="../assets/images/sara-kurfess-xCm3FGX8lb8-unsplash.jpg" alt="Selección de vehículos premium en exhibición" loading="lazy">
+          </div>
+          <div class="carousel__slide" aria-hidden="true">
+            <img src="../assets/images/nathan-trampe-cyIERGMF_1U-unsplash.jpg" alt="Detalle del interior de un vehículo Audi" loading="lazy">
+          </div>
+          <div class="carousel__slide" aria-hidden="true">
+            <img src="../assets/images/adam-stefanca-hdMSxGizchk-unsplash.jpg" alt="Automóvil deportivo rojo en un camino arbolado" loading="lazy">
+          </div>
+          <div class="carousel__slide" aria-hidden="true">
+            <img src="../assets/images/vignesh-rajendran-97ZU4Umo3WU-unsplash.jpg" alt="Automóvil blanco rodeado de palmeras" loading="lazy">
+          </div>
+        </div>
+
+        <header class="site-header">
+          <a class="brand" href="#inicio" aria-label="Worldcar, inicio">
+            <span class="brand__mark" aria-hidden="true">W</span>
+            <span class="brand__name">WORLD<span>CAR</span></span>
+          </a>
+
+          <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="navigation" id="primary-navigation" aria-label="Navegación principal">
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sedes">Sedes</a>
+            <a href="#repuestos">Repuestos</a>
+            <a href="#testimonios">Testimonios</a>
+             <a href="#contactos">Contactos</a>
+            <a class="navigation__login" href="#login">Login <span aria-hidden="true">↗</span></a>
+          </nav>
+        </header>
+
+        <div class="hero__content">
+          <p class="eyebrow"><span></span> WORLD CAR · AUTOMÓVILES DE ALTA GAMA</p>
+          <h1>Conduce lo<br><span>extraordinario.</span></h1>
+          <p class="hero__description">Encuentra ese vehículo que convierte cada destino en una experiencia.</p>
+          <a class="hero__button" href="#catalogo">Descubre nuestro catálogo <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="hero__bottom">
+          <div class="carousel__indicators" role="group" aria-label="Seleccionar imagen">
+            <button class="carousel__dot is-active" type="button" aria-label="Mostrar imagen 1" aria-current="true"></button>
+            <button class="carousel__dot" type="button" aria-label="Mostrar imagen 2"></button>
+            <button class="carousel__dot" type="button" aria-label="Mostrar imagen 3"></button>
+            <button class="carousel__dot" type="button" aria-label="Mostrar imagen 4"></button>
+            <button class="carousel__dot" type="button" aria-label="Mostrar imagen 5"></button>
+          </div>
+
+          <div class="carousel__counter" aria-live="polite" aria-atomic="true">
+            <span class="carousel__current">01</span>
+            <span class="carousel__counter-line"></span>
+            <span class="carousel__total">05</span>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="carousel__arrow carousel__previous" type="button" aria-label="Imagen anterior">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="carousel__arrow carousel__next" type="button" aria-label="Imagen siguiente">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe" id="suscribe" aria-labelledby="subscribe-title">
+      <div class="subscribe__content">
+        <p class="eyebrow"><span></span> WORLD CAR · NOVEDADES</p>
+        <h2 id="subscribe-title">Suscríbete a lo <span>extraordinario.</span></h2>
+        <p class="subscribe__description">Recibe novedades, lanzamientos y ofertas exclusivas directamente en tu correo.</p>
+        <form class="subscribe__form">
+          <label class="subscribe__label" for="subscribe-email">Correo electrónico</label>
+          <div class="subscribe__fields">
+            <input id="subscribe-email" name="email" type="email" placeholder="tu@email.com" autocomplete="email" required>
+            <button type="submit">Enviar <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
