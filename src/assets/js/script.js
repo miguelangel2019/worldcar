@@ -61,6 +61,37 @@ if (carousel) {
     if (!carousel.contains(event.relatedTarget)) {
       startAutoplay();
     }
+
+    const catalog = document.querySelector(".catalog");
+
+    if (catalog) {
+      const filters = Array.from(catalog.querySelectorAll(".catalog__filter select"));
+      const vehicles = Array.from(catalog.querySelectorAll(".vehicle-card"));
+      const resultCount = catalog.querySelector(".catalog__result-count");
+      const emptyMessage = catalog.querySelector(".catalog__empty");
+
+      const filterVehicles = () => {
+        const selectedValues = filters.map((filter) => filter.value);
+        let visibleCount = 0;
+
+        vehicles.forEach((vehicle) => {
+          const matches = ["brand", "model", "year", "condition"].every((attribute, index) => {
+            return !selectedValues[index] || vehicle.dataset[attribute] === selectedValues[index];
+          });
+
+          vehicle.hidden = !matches;
+          if (matches) {
+            visibleCount += 1;
+          }
+        });
+
+        resultCount.textContent = `${visibleCount} ${visibleCount === 1 ? "vehículo encontrado" : "vehículos encontrados"}`;
+        emptyMessage.hidden = visibleCount > 0;
+      };
+
+      filters.forEach((filter) => filter.addEventListener("change", filterVehicles));
+      filterVehicles();
+    }
   });
 
   reducedMotion.addEventListener("change", startAutoplay);

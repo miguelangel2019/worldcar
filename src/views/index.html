@@ -44,7 +44,7 @@
             <span></span>
             <span></span>
           </button>
-
+<!-- SECCION NAVEGACIÓN -->
           <nav class="navigation" id="primary-navigation" aria-label="Navegación principal">
             <a href="#catalogo">Catálogo</a>
             <a href="#sedes">Sedes</a>
@@ -61,7 +61,7 @@
           <p class="hero__description">Encuentra ese vehículo que convierte cada destino en una experiencia.</p>
           <a class="hero__button" href="#catalogo">Descubre nuestro catálogo <span aria-hidden="true">↗</span></a>
         </div>
-
+<!-- SECCION CARRUSEL IMAGENES -->
         <div class="hero__bottom">
           <div class="carousel__indicators" role="group" aria-label="Seleccionar imagen">
             <button class="carousel__dot is-active" type="button" aria-label="Mostrar imagen 1" aria-current="true"></button>
@@ -88,7 +88,7 @@
         </div>
       </div>
     </section>
-
+<!-- SECCION SUSCRIBE -->
     <section class="subscribe" id="suscribe" aria-labelledby="subscribe-title">
       <div class="subscribe__content">
         <p class="eyebrow"><span></span> WORLD CAR · NOVEDADES</p>
@@ -101,6 +101,140 @@
             <button type="submit">Enviar <span aria-hidden="true">↗</span></button>
           </div>
         </form>
+      </div>
+    </section>
+<!-- SECCION CATALOGO -->
+    <section class="catalog" id="catalogo" aria-labelledby="catalog-title">
+      <div class="catalog__container">
+        <div class="catalog__heading">
+          <p class="eyebrow"><span></span> WORLD CAR · SELECCIÓN EXCLUSIVA</p>
+          <h2 id="catalog-title">Nuestro <span>catálogo.</span></h2>
+          <p class="catalog__description">Encuentra el vehículo que acompaña tu próximo destino.</p>
+        </div>
+
+        <div class="catalog__filters" aria-label="Filtrar vehículos">
+          <div class="catalog__filter">
+            <label for="filter-brand">Marca</label>
+            <select id="filter-brand" name="marca">
+              <option value="">Todas las marcas</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="Alfa Romeo">Alfa romeo</option>
+              <option value="Jaguar">Jaguar</option>
+            </select>
+          </div>
+          <div class="catalog__filter">
+            <label for="filter-model">Modelo</label>
+            <select id="filter-model" name="modelo">
+              <option value="">Todos los modelos</option>
+              <option value="A4">A4</option>
+              <option value="Q5">Q5</option>
+              <option value="X5">X5</option>
+              <option value="Serie 3">Serie 3</option>
+              <option value="C-Class">C-Class</option>
+              <option value="GLC">GLC</option>
+              <option value="911">911</option>
+              <option value="Cayenne">Cayenne</option>
+              <option value="Corolla">Corolla</option>
+            </select>
+          </div>
+          <div class="catalog__filter">
+            <label for="filter-year">Año</label>
+            <select id="filter-year" name="año">
+              <option value="">Todos los años</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="catalog__filter">
+            <label for="filter-condition">Condición</label>
+            <select id="filter-condition" name="condicion">
+              <option value="">Todas las condiciones</option>
+              <option value="Nuevo">Nuevo</option>
+              <option value="Usado">Usado</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="catalog__result-count" aria-live="polite"></p>
+        <div class="catalog__grid">
+          <article class="vehicle-card" data-brand="Audi" data-model="A4" data-year="2024" data-condition="Nuevo">
+            <img src="../assets/images/catalogo/adam-stefanca-hdMSxGizchk-unsplash.jpg" alt="Audi A4 en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">Audi <span>·</span> 2024</p>
+              <h3>A4</h3>
+              <span class="vehicle-card__condition">Nuevo</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="Audi" data-model="Q5" data-year="2022" data-condition="Usado">
+            <img src="../assets/images/catalogo/im7.jpg" alt="Audi Q5 en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">Audi <span>·</span> 2022</p>
+              <h3>Q5</h3>
+              <span class="vehicle-card__condition">Usado</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="BMW" data-model="X5" data-year="2023" data-condition="Usado">
+            <img src="../assets/images/catalogo/ima 2.jpg" alt="BMW X5 en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">BMW <span>·</span> 2023</p>
+              <h3>X5</h3>
+              <span class="vehicle-card__condition">Usado</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="BMW" data-model="Serie 3" data-year="2021" data-condition="Usado">
+            <img src="../assets/images/catalogo/ima3.jpg" alt="BMW Serie 3 en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">BMW <span>·</span> 2021</p>
+              <h3>Serie 3</h3>
+              <span class="vehicle-card__condition">Usado</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="Mercedes-Benz" data-model="C-Class" data-year="2024" data-condition="Nuevo">
+            <img src="../assets/images/catalogo/imag5.jpg" alt="Mercedes-Benz C-Class en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">Mercedes-Benz <span>·</span> 2024</p>
+              <h3>C-Class</h3>
+              <span class="vehicle-card__condition">Nuevo</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="Mercedes-Benz" data-model="GLC" data-year="2022" data-condition="Usado">
+            <img src="../assets/images/catalogo/imag6.jpg" alt="Mercedes-Benz GLC en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">Mercedes-Benz <span>·</span> 2022</p>
+              <h3>GLC</h3>
+              <span class="vehicle-card__condition">Usado</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="Porsche" data-model="911" data-year="2023" data-condition="Nuevo">
+            <img src="../assets/images/catalogo/adam-stefanca-hdMSxGizchk-unsplash.jpg" alt="Porsche 911 en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">Porsche <span>·</span> 2023</p>
+              <h3>911</h3>
+              <span class="vehicle-card__condition">Nuevo</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="Porsche" data-model="Cayenne" data-year="2021" data-condition="Usado">
+            <img src="../assets/images/catalogo/im7.jpg" alt="Porsche Cayenne en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">Porsche <span>·</span> 2021</p>
+              <h3>Cayenne</h3>
+              <span class="vehicle-card__condition">Usado</span>
+            </div>
+          </article>
+          <article class="vehicle-card" data-brand="Toyota" data-model="Corolla" data-year="2020" data-condition="Usado">
+            <img src="../assets/images/catalogo/ima 2.jpg" alt="Toyota Corolla en exhibición" loading="lazy">
+            <div class="vehicle-card__details">
+              <p class="vehicle-card__eyebrow">Toyota <span>·</span> 2020</p>
+              <h3>Corolla</h3>
+              <span class="vehicle-card__condition">Usado</span>
+            </div>
+          </article>
+        </div>
+        <p class="catalog__empty" hidden>No hay vehículos que coincidan con los filtros seleccionados.</p>
       </div>
     </section>
   </main>
