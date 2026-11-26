@@ -273,6 +273,114 @@
         </div>
       </div>
     </section>
+    <section class="testimonials" id="testimonios" aria-labelledby="testimonials-title">
+      <div class="testimonials__container">
+        <div class="testimonials__heading">
+          <div>
+            <p class="eyebrow"><span></span> WORLD CAR · EXPERIENCIAS</p>
+            <h2 id="testimonials-title">Lo que dicen <span>nuestros clientes.</span></h2>
+          </div>
+        </div>
+
+        <div class="testimonials__controls">
+          <p class="testimonials__status" aria-live="polite" aria-atomic="true"></p>
+          <div class="testimonials__buttons">
+            <button class="testimonials__button testimonials__previous" type="button" aria-label="Testimonios anteriores">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="testimonials__button testimonials__next" type="button" aria-label="Testimonios siguientes">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonials__carousel" role="region" aria-roledescription="carrusel" aria-label="Testimonios de clientes">
+          <div class="testimonials__track">
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/Ana.jpg" alt="Ana, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Ana</h3>
+                <p><span>Marca</span> Mercedes-Benz</p>
+                <p><span>Modelo</span> C-Class</p>
+                <blockquote>“Excelente atención y un proceso de compra sencillo.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/carlos.jpg" alt="Carlos, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Carlos</h3>
+                <p><span>Marca</span> Audi</p>
+                <p><span>Modelo</span> A4</p>
+                <blockquote>“Encontré el vehículo ideal con una asesoría clara.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/carmen.jpg" alt="Carmen, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Carmen</h3>
+                <p><span>Marca</span> BMW</p>
+                <p><span>Modelo</span> X5</p>
+                <blockquote>“La experiencia fue cómoda desde el primer momento.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/hernesto.jpg" alt="Hernesto, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Hernesto</h3>
+                <p><span>Marca</span> Toyota</p>
+                <p><span>Modelo</span> Corolla</p>
+                <blockquote>“Me acompañaron en cada paso de la compra.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/jose.jpg" alt="José, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>José</h3>
+                <p><span>Marca</span> Porsche</p>
+                <p><span>Modelo</span> Cayenne</p>
+                <blockquote>“Buena atención y respuesta rápida a mis consultas.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/Marta.jpg" alt="Marta, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Marta</h3>
+                <p><span>Marca</span> Mercedes-Benz</p>
+                <p><span>Modelo</span> GLC</p>
+                <blockquote>“Recibí una atención amable y profesional.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/Miguel.jpg" alt="Miguel, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Miguel</h3>
+                <p><span>Marca</span> Audi</p>
+                <p><span>Modelo</span> Q5</p>
+                <blockquote>“El equipo resolvió todas mis dudas con claridad.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/Mirla.jpg" alt="Mirla, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Mirla</h3>
+                <p><span>Marca</span> BMW</p>
+                <p><span>Modelo</span> Serie 3</p>
+                <blockquote>“Muy satisfecha con la atención recibida.”</blockquote>
+              </footer>
+            </article>
+            <article class="testimonial-card">
+              <img src="../assets/images/testimonio/sabrina.jpg" alt="Sabrina, cliente de Worldcar" loading="lazy">
+              <footer class="testimonial-card__footer">
+                <h3>Sabrina</h3>
+                <p><span>Marca</span> Porsche</p>
+                <p><span>Modelo</span> 911</p>
+                <blockquote>“Una experiencia de compra agradable y transparente.”</blockquote>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- SECCION SEDE -->
     <section class="branches" id="sedes" aria-labelledby="branches-title">
       <div class="branches__container">
@@ -325,6 +433,42 @@
             </footer>
           </article>
         </div>
+      </div>
+    </section>
+    <section class="contact" id="contactos" aria-labelledby="contact-title">
+      <div class="contact__container">
+        <div class="contact__heading">
+          <p class="eyebrow"><span></span> WORLD CAR · ESTAMOS PARA AYUDARTE</p>
+          <h2 id="contact-title">Contáctanos <span>hoy.</span></h2>
+          <p>Envíanos tu consulta y nos pondremos en contacto contigo.</p>
+        </div>
+
+        <form class="contact__form" method="post">
+          <div class="contact__field">
+            <label for="contact-email">Correo electrónico</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="contact__field">
+            <label for="contact-name">Nombre y apellidos</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre completo" required>
+          </div>
+          <div class="contact__field contact__field--full">
+            <label for="contact-subject">Asunto</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" selected disabled>Selecciona un asunto</option>
+              <option value="consulta-general">Consulta general</option>
+              <option value="vehiculos">Vehículos</option>
+              <option value="repuestos">Repuestos</option>
+              <option value="sedes">Sedes</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="contact__field contact__field--full">
+            <label for="contact-message">Mensaje</label>
+            <textarea id="contact-message" name="message" rows="6" placeholder="Escribe tu mensaje" required></textarea>
+          </div>
+          <button class="contact__submit" type="submit">Enviar <span aria-hidden="true">↗</span></button>
+        </form>
       </div>
     </section>
   </main>

@@ -162,3 +162,59 @@ if (branchMapDialog) {
     branchMapFrame.removeAttribute("src");
   });
 }
+
+const testimonialsCarousel = document.querySelector(".testimonials__carousel");
+
+if (testimonialsCarousel) {
+  const testimonials = Array.from(testimonialsCarousel.querySelectorAll(".testimonial-card"));
+  const previousButton = document.querySelector(".testimonials__previous");
+  const nextButton = document.querySelector(".testimonials__next");
+  const status = document.querySelector(".testimonials__status");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let autoplay;
+
+  const updateControls = () => {
+    const viewportBounds = testimonialsCarousel.getBoundingClientRect();
+    const visibleIndexes = testimonials.reduce((indexes, card, index) => {
+      const cardBounds = card.getBoundingClientRect();
+      if (cardBounds.right > viewportBounds.left + 1 && cardBounds.left < viewportBounds.right - 1) {
+        indexes.push(index);
+      }
+      return indexes;
+    }, []);
+
+    if (visibleIndexes.length > 0) {
+      status.textContent = `Mostrando ${visibleIndexes[0] + 1}-${visibleIndexes[visibleIndexes.length - 1] + 1} de ${testimonials.length}`;
+    }
+  };
+
+  const scrollCarousel = (direction) => {
+    const maxScroll = testimonialsCarousel.scrollWidth - testimonialsCarousel.clientWidth;
+    const atStart = testimonialsCarousel.scrollLeft <= 1;
+    const atEnd = testimonialsCarousel.scrollLeft >= maxScroll - 1;
+    const target = direction > 0
+      ? (atEnd ? 0 : Math.min(testimonialsCarousel.scrollLeft + testimonialsCarousel.clientWidth, maxScroll))
+      : (atStart ? maxScroll : Math.max(testimonialsCarousel.scrollLeft - testimonialsCarousel.clientWidth, 0));
+
+    testimonialsCarousel.scrollTo({
+      left: target,
+      behavior: reducedMotion.matches ? "auto" : "smooth"
+    });
+  };
+
+  const startAutoplay = () => {
+    window.clearInterval(autoplay);
+    if (!reducedMotion.matches && document.visibilityState === "visible") {
+      autoplay = window.setInterval(() => scrollCarousel(1), 5000);
+    }
+  };
+
+  previousButton.addEventListener("click", () => scrollCarousel(-1));
+  nextButton.addEventListener("click", () => scrollCarousel(1));
+  testimonialsCarousel.addEventListener("scroll", updateControls, { passive: true });
+  window.addEventListener("resize", updateControls);
+  document.addEventListener("visibilitychange", startAutoplay);
+  reducedMotion.addEventListener("change", startAutoplay);
+  updateControls();
+  startAutoplay();
+}
