@@ -113,3 +113,52 @@ if (carousel) {
 
   startAutoplay();
 }
+
+const branchCards = document.querySelectorAll(".branch-card");
+const branchMapDialog = document.querySelector(".branch-map-dialog");
+
+if (branchMapDialog) {
+  const branchMapTitle = branchMapDialog.querySelector("#branch-map-title");
+  const branchMapFrame = branchMapDialog.querySelector(".branch-map-dialog__frame");
+  const branchMapClose = branchMapDialog.querySelector(".branch-map-dialog__close");
+
+  const openBranchMap = (card) => {
+    const city = card.dataset.city;
+    const coordinates = card.dataset.coordinates;
+    const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(coordinates)}&z=16&output=embed`;
+
+    branchMapTitle.textContent = `Sede ${city}`;
+    branchMapFrame.src = mapUrl;
+    branchMapDialog.showModal();
+  };
+
+  branchCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+      if (!event.target.closest("a")) {
+        openBranchMap(card);
+      }
+    });
+    card.addEventListener("keydown", (event) => {
+      if (event.target === card && (event.key === "Enter" || event.key === " ")) {
+        event.preventDefault();
+        openBranchMap(card);
+      }
+    });
+  });
+
+  branchMapClose.addEventListener("click", () => branchMapDialog.close());
+  branchMapDialog.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      branchMapDialog.close();
+    }
+  });
+  branchMapDialog.addEventListener("click", (event) => {
+    if (event.target === branchMapDialog) {
+      branchMapDialog.close();
+    }
+  });
+  branchMapDialog.addEventListener("close", () => {
+    branchMapFrame.removeAttribute("src");
+  });
+}

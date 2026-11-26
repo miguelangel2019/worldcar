@@ -580,6 +580,163 @@ button {
   font-size: 14px;
 }
 
+.branches {
+  padding: 88px 24px 96px;
+  background: var(--color-secondary);
+}
+
+.branches__container {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+.branches__heading {
+  margin-bottom: 36px;
+}
+
+.branches__heading .eyebrow {
+  margin-bottom: 14px;
+}
+
+.branches__heading h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+
+.branches__heading h2 span {
+  color: rgba(247, 245, 242, 0.68);
+}
+
+.branches__description {
+  margin: 14px 0 0;
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.branches__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.branch-card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.branch-card__map {
+  display: block;
+  width: 100%;
+  height: 240px;
+  border: 0;
+  pointer-events: none;
+}
+
+.branch-card__footer {
+  padding: 20px;
+}
+
+.branch-card__footer h3 {
+  margin: 0 0 16px;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.branch-card__footer p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 10px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.branch-card__footer p span:first-child {
+  flex: 0 0 auto;
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.branch-card__footer a:hover {
+  text-decoration: underline;
+}
+
+.branch-card__action {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(247, 245, 242, 0.2);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.branch-map-dialog {
+  width: min(900px, calc(100% - 32px));
+  max-width: none;
+  padding: 0;
+  border: 1px solid rgba(247, 245, 242, 0.25);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.branch-map-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.branch-map-dialog__header {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+}
+
+.branch-map-dialog__header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.branch-map-dialog__close {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid rgba(247, 245, 242, 0.45);
+  background: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.branch-map-dialog__frame {
+  display: block;
+  width: 100%;
+  height: min(68vh, 620px);
+  min-height: 320px;
+  border: 0;
+}
+
 :focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 4px;
@@ -730,6 +887,10 @@ button {
     padding: 64px 20px 72px;
   }
 
+  .branches {
+    padding: 64px 20px 72px;
+  }
+
   .catalog__filters {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px 12px;
@@ -739,6 +900,19 @@ button {
   .catalog__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
+  }
+
+  .branches__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .branch-card__map {
+    height: 200px;
+  }
+
+  .branch-card__footer {
+    padding: 14px;
   }
 
   .vehicle-card__details {
@@ -782,12 +956,17 @@ button {
 }
 
 @media (max-width: 380px) {
-  .catalog__grid {
+  .catalog__grid,
+  .branches__grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .hero__bottom {
     width: calc(100% - 32px);
+  }
+
+  .branch-card__map {
+    height: 220px;
   }
 
   .carousel__indicators {

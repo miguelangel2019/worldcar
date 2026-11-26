@@ -54,7 +54,7 @@
             <a class="navigation__login" href="#login">Login <span aria-hidden="true">↗</span></a>
           </nav>
         </header>
-
+<!-- SECCION HERO -->
         <div class="hero__content">
           <p class="eyebrow"><span></span> WORLD CAR · AUTOMÓVILES DE ALTA GAMA</p>
           <h1>Conduce lo<br><span>extraordinario.</span></h1>
@@ -237,6 +237,69 @@
         <p class="catalog__empty" hidden>No hay vehículos que coincidan con los filtros seleccionados.</p>
       </div>
     </section>
+    <!-- SECCION SEDE -->
+    <section class="branches" id="sedes" aria-labelledby="branches-title">
+      <div class="branches__container">
+        <div class="branches__heading">
+          <p class="eyebrow"><span></span> WORLD CAR · ENCUÉNTRANOS</p>
+          <h2 id="branches-title">Nuestras <span>sedes.</span></h2>
+          <p class="branches__description">Visítanos en cualquiera de nuestras ubicaciones.</p>
+        </div>
+
+        <div class="branches__grid">
+          <article class="branch-card" role="button" tabindex="0" aria-haspopup="dialog"
+            aria-label="Ampliar mapa de la sede Caracas"
+            data-city="Caracas" data-coordinates="10.489848931143966, -66.85417356406585">
+            <iframe class="branch-card__map" title="Mapa de la sede Worldcar en Caracas"
+              src="https://maps.google.com/maps?q=10.489848931143966%2C-66.85417356406585&z=14&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1"></iframe>
+            <footer class="branch-card__footer">
+              <h3>Caracas</h3>
+              <p><span>Teléfono</span><a href="tel:+584242022020">(0424-2022020)</a></p>
+              <p><span>Dirección</span><span>Ver ubicación exacta en el mapa</span></p>
+              <span class="branch-card__action">Ampliar mapa <span aria-hidden="true">↗</span></span>
+            </footer>
+          </article>
+
+          <article class="branch-card" role="button" tabindex="0" aria-haspopup="dialog"
+            aria-label="Ampliar mapa de la sede Barquisimeto"
+            data-city="Barquisimeto" data-coordinates="10.071917607518126, -69.29263733107054">
+            <iframe class="branch-card__map" title="Mapa de la sede Worldcar en Barquisimeto"
+              src="https://maps.google.com/maps?q=10.071917607518126%2C-69.29263733107054&z=14&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1"></iframe>
+            <footer class="branch-card__footer">
+              <h3>Barquisimeto</h3>
+              <p><span>Teléfono</span><a href="tel:+584242022020">(0424-2022020)</a></p>
+              <p><span>Dirección</span><span>Ver ubicación exacta en el mapa</span></p>
+              <span class="branch-card__action">Ampliar mapa <span aria-hidden="true">↗</span></span>
+            </footer>
+          </article>
+
+          <article class="branch-card" role="button" tabindex="0" aria-haspopup="dialog"
+            aria-label="Ampliar mapa de la sede Porlamar"
+            data-city="Porlamar" data-coordinates="10.99625316622721, -63.81245079189596">
+            <iframe class="branch-card__map" title="Mapa de la sede Worldcar en Porlamar"
+              src="https://maps.google.com/maps?q=10.99625316622721%2C-63.81245079189596&z=14&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1"></iframe>
+            <footer class="branch-card__footer">
+              <h3>Porlamar</h3>
+              <p><span>Teléfono</span><a href="tel:+584242022020">(0424-2022020)</a></p>
+              <p><span>Dirección</span><span>Ver ubicación exacta en el mapa</span></p>
+              <span class="branch-card__action">Ampliar mapa <span aria-hidden="true">↗</span></span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <dialog class="branch-map-dialog" aria-labelledby="branch-map-title">
+    <div class="branch-map-dialog__header">
+      <h2 id="branch-map-title">Mapa de la sede</h2>
+      <button class="branch-map-dialog__close" type="button" aria-label="Cerrar mapa">×</button>
+    </div>
+    <iframe class="branch-map-dialog__frame" title="Mapa ampliado de la sede seleccionada"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </dialog>
 </body>
 </html>
